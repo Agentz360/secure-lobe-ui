@@ -11,14 +11,12 @@ import { mergeRefs } from 'react-merge-refs';
 
 import { FloatingLayerProvider } from '@/hooks/useFloatingLayer';
 import { useNativeButton } from '@/hooks/useNativeButton';
-import { usePortalContainer } from '@/hooks/usePortalContainer';
 import { styles } from '@/Menu/sharedStyle';
 import { CLASSNAMES } from '@/styles/classNames';
+import { useAppElement } from '@/ThemeProvider';
 import { placementMap } from '@/utils/placement';
 
 import { type DropdownMenuPlacement } from './type';
-
-export const DROPDOWN_MENU_CONTAINER_ATTR = 'data-lobe-ui-dropdown-menu-container';
 
 export const DropdownMenuRoot: typeof Menu.Root = (props) => <Menu.Root modal={false} {...props} />;
 export const DropdownMenuSubmenuRoot = Menu.SubmenuRoot;
@@ -95,8 +93,8 @@ export type DropdownMenuPortalProps = React.ComponentProps<typeof Menu.Portal> &
 };
 
 export const DropdownMenuPortal = ({ container, ...rest }: DropdownMenuPortalProps) => {
-  const defaultContainer = usePortalContainer(DROPDOWN_MENU_CONTAINER_ATTR);
-  return <Menu.Portal container={container ?? defaultContainer} {...rest} />;
+  const appElement = useAppElement();
+  return <Menu.Portal container={container ?? appElement ?? undefined} {...rest} />;
 };
 
 DropdownMenuPortal.displayName = 'DropdownMenuPortal';

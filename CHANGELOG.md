@@ -2,6 +2,30 @@
 
 # Changelog
 
+## [4.36.2](https://github.com/lobehub/lobe-ui/compare/v4.36.1...v4.36.2) (2026-02-11)
+
+### 🐛 Bug Fixes
+
+- Remove unused container attributes from DropdownMenu, EditorSlashMenu, LobeSelect, and Popover components ([0406d82](https://github.com/lobehub/lobe-ui/commit/0406d82))
+
+## [4.36.1](https://github.com/lobehub/lobe-ui/compare/v4.36.0...v4.36.1) (2026-02-11)
+
+### ♻ Code Refactoring
+
+- **portal**: Streamline modal and popover container management ([a99ec2e](https://github.com/lobehub/lobe-ui/commit/a99ec2e))
+
+# [4.36.0](https://github.com/lobehub/lobe-ui/compare/v4.35.3...v4.36.0) (2026-02-11)
+
+### ✨ Features
+
+- **portal**: Integrate useAppElement for portal container management ([b03c118](https://github.com/lobehub/lobe-ui/commit/b03c118))
+
+## [4.35.3](https://github.com/lobehub/lobe-ui/compare/v4.35.2...v4.35.3) (2026-02-10)
+
+### ♻ Code Refactoring
+
+- **portal**: Migrate portal container implementation, closes [#466](https://github.com/lobehub/lobe-ui/issues/466) ([f6897f5](https://github.com/lobehub/lobe-ui/commit/f6897f5))
+
 ## [4.35.2](https://github.com/lobehub/lobe-ui/compare/v4.35.1...v4.35.2) (2026-02-09)
 
 ### 🐛 Bug Fixes
